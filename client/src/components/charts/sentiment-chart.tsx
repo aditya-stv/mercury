@@ -1,4 +1,5 @@
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
+import { themeColors } from "@/utils/colors";
 
 interface SentimentChartProps {
   data: Array<{
@@ -26,30 +27,30 @@ export function SentimentChart({ data }: SentimentChartProps) {
     <div className="w-full h-40" data-testid="sentiment-chart">
       <ResponsiveContainer width="100%" height="100%">
         <AreaChart data={chartData}>
-          <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />
+          <CartesianGrid strokeDasharray="3 3" stroke={themeColors.border} />
           <XAxis
             dataKey="date"
-            stroke="hsl(var(--muted-foreground))"
+            stroke={themeColors.mutedForeground}
             fontSize={12}
           />
           <YAxis
-            stroke="hsl(var(--muted-foreground))"
+            stroke={themeColors.mutedForeground}
             fontSize={12}
             domain={[0, 100]}
           />
           <Tooltip
             contentStyle={{
-              backgroundColor: "hsl(var(--card))",
-              border: "1px solid hsl(var(--border))",
+              backgroundColor: themeColors.card,
+              border: `1px solid ${themeColors.border}`,
               borderRadius: "6px",
             }}
-            labelStyle={{ color: "hsl(var(--foreground))" }}
+            labelStyle={{ color: themeColors.foreground }}
           />
           <Area
             type="monotone"
             dataKey="sentiment"
-            stroke="hsl(var(--primary))"
-            fill="hsl(var(--primary))"
+            stroke={themeColors.primary}
+            fill={themeColors.primary}
             fillOpacity={0.2}
           />
         </AreaChart>
