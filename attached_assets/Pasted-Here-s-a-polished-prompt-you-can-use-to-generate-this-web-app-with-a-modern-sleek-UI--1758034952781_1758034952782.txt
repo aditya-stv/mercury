@@ -1,0 +1,105 @@
+Here’s a polished **prompt** you can use to generate this web app with a modern, sleek UI:
+
+---
+
+**Prompt:**
+
+Build a **modern finance web app** called **Wyckoff/Chandra/Dhruv/Rupya** with the tagline **“Ahead of Time.”**
+
+### 🎯 Core Requirements
+
+* Use **React + Tailwind CSS** (latest best practices).
+* Apply **dark mode by default** with a **sleek, minimal, modern UI**.
+* Fonts: **Inter or SF Pro**.
+* Icons: **Feather or Fluent icons**.
+* Color system:
+
+  * Green → Bullish
+  * Red → Bearish
+  * Blue/Purple → Neutral / informational elements
+
+---
+
+### 📱 User Flow & Screens
+
+#### 1. **Onboarding Screen**
+
+* Welcome message + app intro.
+* Choose investor type: **Conservative, Balanced, Aggressive**.
+* Choose interests: **Fundamental, Technical, Pattern**.
+* (Optional) Link brokerage account (mockup with Plaid-style modal).
+
+#### 2. **Home Dashboard**
+
+* **Top Sentiment Movers** (cards with % change, e.g., “TCS: Bullish +40%”).
+* **Trending News** (AI summarized in 1–2 lines).
+* **Watchlist Quick View** (mini cards with sentiment + price).
+* **Market Overview**:
+
+  * Nifty 50, Sensex, Bank Nifty, Nifty 500
+  * Global: S\&P, Nasdaq, Dow
+* **Heatmap for Top Sectors** (grid with color-coded performance).
+* **Daily Signals** (carousel):
+
+  * “3 Stocks You Should Watch Today”
+  * “AI suggests TSLA might be overbought”
+
+#### 3. **Stock Detail Screen**
+
+* Price Chart (tabs: 1D, 1W, 1M, 1Y, 5Y).
+* **Sentiment Score** (Bullish/Bearish/Neutral indicator).
+* **Source breakdown** donut: News %, Reddit %, X %.
+* **Sentiment Trend Line** chart.
+* **Financial Summary Cards**: PB, Market Cap, ROE, D/E, EPS, PE, Revenue Growth, Debt.
+* **AI News Feed** (summaries, filter by source).
+* **Alerts Toggle** (set price, volume, sentiment alerts).
+
+#### 4. **Alerts & Notifications**
+
+* Dynamic alert cards:
+
+  * “HDFC Bank sentiment jumped 30% after earnings beat.”
+  * “TCS downgraded by Goldman Sachs.”
+  * “Earnings tomorrow: ICICI, SBI, L\&T.”
+
+#### 5. **Watchlist & Portfolio Sync**
+
+* Add/remove stocks to watchlist.
+* Show **sentiment + % price change**.
+* Portfolio sync (mock brokerage API).
+* Analyze holdings: sentiment + fundamentals breakdown.
+
+#### 6. **Premium Features Screen**
+
+* Subscription unlock:
+
+  * Backtesting strategies (e.g., “Buy when sentiment >70”).
+  * Long-term grading system (A–F).
+  * Unlimited alerts + watchlists.
+  * AI-generated strategy suggestions.
+
+---
+
+### 🛠️ Build Guidelines
+
+* Focus on **performance + clean UX**.
+* Mock with **10–20 major Indian stocks** (Reliance, TCS, HDFC Bank, Tata Motors, Infosys, etc.).
+* Smooth **animations (Framer Motion)** for transitions.
+* Responsive for **desktop + mobile**.
+
+---
+
+⚡ **Output Expected**:
+
+* Production-ready **React + Tailwind web app codebase**.
+* Each screen as a modular component.
+* Navigation with **React Router**.
+* Charts: use **Recharts** (for sentiment, trend lines, heatmaps).
+* News & sentiment data → mock JSON.
+* Alerts/notifications → local state simulation.
+
+---
+
+👉 This prompt will ensure the generated web app looks **modern, interactive, and finance-grade**.
+
+Do you want me to also **convert this into a ready-to-use code scaffold** (React + Tailwind with placeholder data), so you can directly run it?
