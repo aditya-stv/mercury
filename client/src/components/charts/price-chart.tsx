@@ -1,4 +1,5 @@
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
+import { themeColors } from "@/utils/colors";
 
 interface PriceChartProps {
   data: Array<{
@@ -30,32 +31,32 @@ export function PriceChart({ data, timeframe }: PriceChartProps) {
     <div className="w-full h-80" data-testid="price-chart">
       <ResponsiveContainer width="100%" height="100%">
         <LineChart data={chartData}>
-          <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />
+          <CartesianGrid strokeDasharray="3 3" stroke={themeColors.border} />
           <XAxis
             dataKey="time"
-            stroke="hsl(var(--muted-foreground))"
+            stroke={themeColors.mutedForeground}
             fontSize={12}
           />
           <YAxis
-            stroke="hsl(var(--muted-foreground))"
+            stroke={themeColors.mutedForeground}
             fontSize={12}
             domain={['dataMin - 50', 'dataMax + 50']}
           />
           <Tooltip
             contentStyle={{
-              backgroundColor: "hsl(var(--card))",
-              border: "1px solid hsl(var(--border))",
+              backgroundColor: themeColors.card,
+              border: `1px solid ${themeColors.border}`,
               borderRadius: "6px",
             }}
-            labelStyle={{ color: "hsl(var(--foreground))" }}
+            labelStyle={{ color: themeColors.foreground }}
           />
           <Line
             type="monotone"
             dataKey="price"
-            stroke={isPositive ? "hsl(var(--bullish))" : "hsl(var(--bearish))"}
+            stroke={isPositive ? themeColors.bullish : themeColors.bearish}
             strokeWidth={2}
             dot={false}
-            activeDot={{ r: 4, fill: isPositive ? "hsl(var(--bullish))" : "hsl(var(--bearish))" }}
+            activeDot={{ r: 4, fill: isPositive ? themeColors.bullish : themeColors.bearish }}
           />
         </LineChart>
       </ResponsiveContainer>
